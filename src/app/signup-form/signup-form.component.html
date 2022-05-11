@@ -1,0 +1,97 @@
+<section class="text-center">
+   
+    <div class="card-body container"style="background-color:#ADD8E6 ;">
+      <div class="row d-flex justify-content-center ">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-3">Sign up now</h2>
+          <form  [formGroup]="signupForm" (ngSubmit)="onSubmit(signupForm)">
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <label class="form-label" for="username">Username</label>
+                  <input type="text" id="username" class="form-control" formControlName="username"/>
+                  <div style="height: 5px;">
+                  <small class=" text-danger" *ngIf="(signupForm.get('username')!.dirty || signupForm.get('username')!.touched) && signupForm.get('username')!.invalid">
+                      This field is required
+                  </small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <label class="form-label" for="email">Email address</label>
+                  <input type="email" id="email" class="form-control" formControlName="email" />
+                  <div style="height: 5px;">
+                  <small class=" text-danger" *ngIf="(signupForm.get('email')!.dirty || signupForm.get('email')!.touched) && signupForm.get('email')!.invalid">
+                      This field is required
+                  </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" mb-4">
+              <div class="form-outline">
+                  <label class="form-label" for="phone">Phone Number</label>
+                <input type="number" id="phone" class="form-control" maxlength="10" formControlName="phone"/>
+              
+                <div style="height: 5px;">
+                <small class=" text-danger "  *ngIf="(signupForm.get('phone')!.dirty || signupForm.get('phone')!.touched) && signupForm.get('phone')!.invalid">
+                  This field is required
+              </small>
+          </div>
+              </div>
+            </div>
+            <div class="form-outline mb-4">
+              <div class="form-outline">
+                  <label class="form-label" for="fname">Father's Name</label>
+                  <input type="text" id="fname" class="form-control" formControlName="fname" />
+                  <div style="height: 5px;">
+                      <small class=" text-danger "  *ngIf="(signupForm.get('fname')!.dirty || signupForm.get('fname')!.touched) && signupForm.get('fname')!.invalid">
+                          This field is required
+                      </small>
+                  </div>
+                </div>
+            </div>
+            <div class="form-outline mb-4">
+              <label class="form-label" for="pwd">Password</label>
+              <input type="password" id="pwd" class="form-control" formControlName="pwd"/>
+              <div style="height: 5px;">
+                  <small class=" text-danger "  *ngIf="(signupForm.get('pwd')!.dirty || signupForm.get('pwd')!.touched) && signupForm.get('pwd')!.invalid">
+                      This field is required
+                  </small>
+              </div>
+            </div>
+
+            <button type="submit" [disabled]="signupForm.invalid" class="btn btn-primary btn-block mb-4">
+              Sign up
+            </button>
+            <button type="reset"  class="btn btn-secondary  btn-block mb-4 ">
+              Reset
+            </button>
+          </form>
+        </div>
+      </div></div>
+      
+  <div class=" mt-5 mt-md-0 mb-3">
+      <div class="card px-3 table-responsive">
+        <h1 class=" mb-3 text-center" style="text-decoration: underline;" >Table</h1>
+        <table
+          class="table table-bordered border border-3 table-striped bg-light"
+        >
+          <thead class="table-dark border-success">
+            <tr>
+              <th scope="col">Sno.</th>
+              <th scope="col">Username</th>
+              <th scope="col">Email Address</th>
+              <th scope="col">Father's Name</th>
+              <th scope="col">Phone Number</th>
+              <th scope="col">Password</th>
+            </tr>
+          </thead>
+          <tbody class="table-body" id="table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  
+</section>
+
