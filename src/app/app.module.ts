@@ -6,14 +6,26 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { FormsModule } from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
-import { DashboardComponent } from './dashboard/dashboard.component'
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CoursesComponent } from './courses/courses.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SubjectComponent } from './subject/subject.component';
+import { BranchComponent } from './branch/branch.component';
+import { AdminComponent } from './admin/admin.component';
+import { UserComponent } from './user/user.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
     SignupFormComponent,
-    DashboardComponent
+    DashboardComponent,
+    CoursesComponent,
+    PageNotFoundComponent,
+    SubjectComponent,
+    BranchComponent,
+    AdminComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
